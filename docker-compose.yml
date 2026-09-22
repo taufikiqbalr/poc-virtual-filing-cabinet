@@ -3,4 +3,4 @@ services:
     build: ./apps/web
     container_name: oss-vfc-web
     ports:
-      - "2410:2410"
+      - "3410:3410"
