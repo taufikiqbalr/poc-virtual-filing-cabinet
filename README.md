@@ -84,10 +84,10 @@ docker compose up --build
 Open:
 
 ```text
-http://localhost:2410
+http://localhost:3410
 ```
 
-Docker menggunakan port **2410** agar tidak bentrok dengan PoC OSS lain pada range 3000/3400.
+Virtual Filing Cabinet menggunakan port **3410**.
 
 ### Local
 
@@ -100,7 +100,7 @@ npm run dev
 Local development juga berjalan pada:
 
 ```text
-http://localhost:2410
+http://localhost:3410
 ```
 
 ## Technology
