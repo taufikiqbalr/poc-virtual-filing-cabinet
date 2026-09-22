@@ -77,14 +77,17 @@ Tipe kontrol input (form/upload/payment/declaration/photo) adalah **heuristic Po
 ### Docker
 
 ```bash
+docker compose down
 docker compose up --build
 ```
 
 Open:
 
 ```text
-http://localhost:3410
+http://localhost:2410
 ```
+
+Docker menggunakan port **2410** agar tidak bentrok dengan PoC OSS lain pada range 3000/3400.
 
 ### Local
 
@@ -92,6 +95,12 @@ http://localhost:3410
 cd apps/web
 npm install
 npm run dev
+```
+
+Local development juga berjalan pada:
+
+```text
+http://localhost:2410
 ```
 
 ## Technology
