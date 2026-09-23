@@ -2,6 +2,8 @@
 
 Proof of Concept untuk **Virtual Filing Cabinet** pada rancangan OSS v2.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftaufikiqbalr%2Fpoc-virtual-filing-cabinet%2Ftree%2Fmain%2Fapps%2Fweb&project-name=oss-v2-virtual-filing-cabinet&repository-name=poc-virtual-filing-cabinet-vercel)
+
 Konsep utama: Filing Cabinet diperlakukan seperti kabinet di dunia nyata yang memiliki slot-slot persyaratan. Pelaku usaha memilih KBLI, lalu sistem membentuk kabinet persyaratan dari registry `persyaratan_register_deduplicated`.
 
 ## Demo flow
@@ -71,10 +73,41 @@ Tipe kontrol input (form/upload/payment/declaration/photo) adalah **heuristic Po
 - Browser localStorage persistence per KBLI
 - OSS-themed visual identity dan official OSS logo
 - Responsive UI
+- Vercel-ready deployment from `apps/web`
 
-## Run
+## Deploy to Vercel
 
-### Docker
+### Git Integration
+
+Import repository ini di Vercel dan set:
+
+```text
+Root Directory: apps/web
+Framework: Next.js
+Install Command: npm install
+Build Command: npm run build
+Environment Variables: none
+```
+
+Atau klik tombol **Deploy with Vercel** di bagian atas README.
+
+Panduan lengkap tersedia di [docs/VERCEL_DEPLOYMENT.md](docs/VERCEL_DEPLOYMENT.md).
+
+### Vercel CLI
+
+Dari root repository:
+
+```bash
+npm run deploy:vercel
+```
+
+Production deployment:
+
+```bash
+npm run deploy:vercel:prod
+```
+
+## Run with Docker
 
 ```bash
 docker compose down
@@ -87,9 +120,9 @@ Open:
 http://localhost:3410
 ```
 
-Virtual Filing Cabinet menggunakan port **3410**.
+Virtual Filing Cabinet menggunakan port **3410** untuk local/Docker. Pada Vercel, port public dikelola otomatis oleh platform.
 
-### Local
+## Local Development
 
 ```bash
 cd apps/web
@@ -97,7 +130,7 @@ npm install
 npm run dev
 ```
 
-Local development juga berjalan pada:
+Local development berjalan pada:
 
 ```text
 http://localhost:3410
@@ -107,9 +140,12 @@ http://localhost:3410
 
 - Next.js 15
 - React 19
+- Node.js 22
 - Static derived requirement registry
 - Client-side async process simulation
 - Browser localStorage
+- Docker Compose
+- Vercel-ready Next.js configuration
 
 ## Important
 
