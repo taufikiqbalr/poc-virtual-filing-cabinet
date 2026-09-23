@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "npm --prefix apps/web run dev",
     "build": "npm --prefix apps/web run build",
-    "start": "npm --prefix apps/web run start"
+    "start": "npm --prefix apps/web run start",
+    "deploy:vercel": "npx vercel --cwd apps/web",
+    "deploy:vercel:prod": "npx vercel --cwd apps/web --prod"
   }
 }
